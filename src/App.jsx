@@ -116,7 +116,7 @@ function Modal({ module, onClose }) {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" onClick={onClose}>
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
-      <div className="relative bg-surface border border-border rounded-2xl w-full max-w-6xl p-8 shadow-2xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+      <div className="relative bg-surface border border-border rounded-2xl w-full max-w-7xl p-8 shadow-2xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
         <button onClick={onClose} className="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors text-2xl leading-none">&times;</button>
         <h2 className="text-2xl font-bold mb-2 pr-8">{module.title}</h2>
         <p className="text-gray-400 mb-6">{module.desc}</p>
