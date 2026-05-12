@@ -188,19 +188,19 @@ const tourSteps = [
 export function ImportaçãoDwg() {
     const tourRef = useRef(null);
     const [tourCurrentStep, setTourCurrentStep] = useState(null);
-    const imgSources = {
-        img1: './src/assets/importacaodwg/impdwg.jpg',
-        img2: './src/assets/importacaodwg/impdwg2.jpg',
-        img3: './src/assets/importacaodwg/impdwg3.jpg',
-        img4: './src/assets/importacaodwg/impdwg4.jpg',
-        img5: './src/assets/importacaodwg/impdwg5.jpg',
-        img6: './src/assets/importacaodwg/impdwg6.jpg',
-        img7: './src/assets/importacaodwg/impdwg7.jpg',
-        img8: './src/assets/importacaodwg/impdwg8.jpg',
-        img9: './src/assets/importacaodwg/impdwg9.jpg',
-        img10: './src/assets/importacaodwg/impdwg10.jpg',
-        img11: './src/assets/importacaodwg/impdwg11.jpg',
-        img12: './src/assets/importacaodwg/impdwg12.jpg',
+const imgSources = {
+        img1: '/assets/importacaodwg/impdwg.jpg',
+        img2: '/assets/importacaodwg/impdwg2.jpg',
+        img3: '/assets/importacaodwg/impdwg3.jpg',
+        img4: '/assets/importacaodwg/impdwg4.jpg',
+        img5: '/assets/importacaodwg/impdwg5.jpg',
+        img6: '/assets/importacaodwg/impdwg6.jpg',
+        img7: '/assets/importacaodwg/impdwg7.jpg',
+        img8: '/assets/importacaodwg/impdwg8.jpg',
+        img9: '/assets/importacaodwg/impdwg9.jpg',
+        img10: '/assets/importacaodwg/impdwg10.jpg',
+        img11: '/assets/importacaodwg/impdwg11.jpg',
+        img12: '/assets/importacaodwg/impdwg12.jpg',
     }
     let currentImg = imgSources.img1
 
