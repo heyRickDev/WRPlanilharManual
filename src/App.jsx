@@ -27,8 +27,8 @@ const modules = [
   { title: 'Importação Automatizada', desc: 'Configure uma pasta que deseje para fazer a leitura automática.' },
   { title: 'Minhas Conferências', desc: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.' },
   { title: 'Conferências Projetos', desc: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.' },
-  { title: 'Análise Gerencial ', desc: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.' },
-  ];
+  { title: 'Análise Gerencial', desc: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.' },
+];
 
 const features = [
   { num: '01', title: 'Lorem Ipsum Dolor', desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.' },
@@ -116,10 +116,7 @@ function Modal({ module, onClose }) {
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" onClick={onClose}>
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
-      <div className="relative bg-surface border border-border rounded-2xl w-full max-w-7xl p-8 shadow-2xl max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors text-2xl leading-none">&times;</button>
-        <h2 className="text-2xl font-bold mb-2 pr-8">{module.title}</h2>
-        <p className="text-gray-400 mb-6">{module.desc}</p>
+      <div className="relative bg-surface border border-border rounded-2xl w-full max-w-6xl p-8 shadow-2xl max-h-[90vh] overflow-y-hidden" onClick={(e) => e.stopPropagation()}>
         {ModulePage && <ModulePage />}
       </div>
     </div>
@@ -140,10 +137,27 @@ function Modules({ onOpenDoc }) {
               <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
               <h3 className="text-lg font-semibold mb-2">{m.title}</h3>
               <p className="text-gray-400 text-sm mb-4">{m.desc}</p>
+              <span className="text-indigo-400 text-sm font-medium hover:text-indigo-300 transition-colors">Ver mais →</span>
             </div>
           ))}
         </div>
       </div>
+    </section>
+  );
+}
+
+function Features() {
+  return (
+    <section className="bg-bg">
+      {features.map((f, i) => (
+        <div key={i} className="min-h-screen flex items-center justify-center px-6 relative">
+          <div className="text-center max-w-xl">
+            <span className="text-indigo-400 text-sm font-bold tracking-widest mb-4 block">{f.num}</span>
+            <h3 className="text-3xl md:text-4xl font-bold mb-4">{f.title}</h3>
+            <p className="text-gray-400 text-lg">{f.desc}</p>
+          </div>
+        </div>
+      ))}
     </section>
   );
 }
@@ -191,8 +205,9 @@ export default function App() {
       <main>
         <Hero />
         <Modules onOpenDoc={setSelectedModule} />
+        <Features />
       </main>
-      <Footer />
+      {/* <Footer /> */}
       {selectedModule && <Modal module={selectedModule} onClose={() => setSelectedModule(null)} />}
     </>
   );
