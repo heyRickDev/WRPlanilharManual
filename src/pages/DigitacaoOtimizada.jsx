@@ -1,15 +1,283 @@
+import { useEffect, useRef, useState } from 'react';
+import { driver } from 'driver.js';
+import 'driver.js/dist/driver.css';
+
+const tourSteps = [
+  {
+    id: 'spot-1',
+    top: '11.5%', left: '2%', width: '42%', height: '9%',
+    title: 'Dados cliente',
+    description: 'Insira aqui os dados referentes ao projeto que deseja importar.',
+    side: 'bottom',
+    align: 'start',
+  },
+  {
+    id: 'spot-2',
+    top: '11%', left: '46%', width: '14%', height: '11%',
+    title: 'Tipo de projeto',
+    description: `
+                    Selecione aqui o tipo de projeto que deseja importar. 
+                    Importante selecionar o tipo corretamente para que a 
+                    leitura consiga encontrar os elementos estruturais no projeto.
+                    Para projetos específicos, como cintas, é preciso marcar o campo geral
+                    e inserir a letra C.
+                `,
+    side: 'bottom',
+    align: 'center',
+  },
+  {
+    id: 'spot-3',
+    top: '12%', left: '62%', width: '15%', height: '7%',
+    title: 'Gerar planilhamento',
+    description: 'Clique aqui para iniciar o planilhamento manual.',
+    side: 'bottom',
+    align: 'center',
+  },
+  {
+    id: 'spot-4',
+    top: '25%', left: '0%', width: '100%', height: '80%',
+    title: 'Digitação Manual',
+    description: `Aqui voce tem o acesso a livre inserção dos valores de maneira manual.`,
+    side: 'left',
+    align: 'end',
+  },
+  {
+    id: 'spot-5',
+    top: '32%', left: '14%', width: '3%', height: '3%',
+    title: 'Inserir elemento',
+    description: 'Clique em inserir ou F2 para habilitar a caixa de inserção  .',
+    side: 'left',
+    align: 'end',
+  },
+  {
+    id: 'spot-6',
+    top: '39%', left: '14%', width: '21%', height: '3%',
+    title: 'Elemento e multiplicador',
+    description: 'Insira o nome do elemento estrutural e caso queira adicionar um multiplicador para este elemento.',
+    side: 'left',
+    align: 'end',
+  },
+  {
+    id: 'spot-7',
+    top: '45%', left: '14%', width: '21%', height: '3%',
+    title: 'Observação geral',
+    description: 'Aqui voce pode adicionar uma observação para o elemento. Será aplicado para cada posição adicionada desse elemento.',
+    side: 'left',
+    align: 'end',
+  },
+  {
+    id: 'spot-8',
+    top: '33%', left: '40%', width: '30%', height: '20%',
+    title: 'Inserção de posições',
+    description: 'Agora é só ir preenchendo os valores de cada posição.',
+    side: 'left',
+    align: 'end',
+  },
+  {
+    id: 'spot-9',
+    top: '56%', left: '0%', width: '100%', height: '36%',
+    title: 'Email',
+    description: 'As posições vão sendo armazenadas na grid abaixo. Repita o processo anterior para o mesmo elemento.',
+    side: 'right',
+    align: 'start',
+  },{
+    id: 'spot-10',
+    top: '0%', left: '0%', width: '100%', height: '100%',
+    title: 'Email',
+    description: 'Clicando com o botão direito temos algumas funções de ações com a grid. Vejamos..',
+    side: 'left',
+    align: 'center',
+  },{
+    id: 'spot-11',
+    top: '60.5%', left: '22%', width: '9%', height: '.1%',
+    title: 'Agrupar',
+    description: 'Aqui podemos agrupar os elementos/posições que forem iguais, incrementando na quantidade.',
+    side: 'left',
+    align: 'start',
+  },
+  {
+    id: 'spot-12',
+    top: '63.5%', left: '22%', width: '9%', height: '.1%',
+    title: 'Detalhar variável',
+    description: 'Para peças que são variáveis podemos clicar aqui e uma tela irá abrir onde iremos gerar as variáveis.',
+    side: 'right',
+    align: 'start',
+  },
+  {
+    id: 'spot-13',
+    top: '10%', left: '16%', width: '69%', height: '84%',
+    title: 'Gerar planilhamento',
+    description: '',
+    side: 'left',
+    align: 'center',
+  },
+  {
+    id: 'spot-14',
+    top: '27%', left: '0%', width: '100%', height: '80%',
+    title: 'Carimbo',
+    description: 'Note que o carimbo é formado por várias linhas, que podem onerar a leitura causando lentidão. Vamos removê-lo!',
+    side: 'top',
+    align: 'center',
+  },
+  {
+    id: 'spot-15',
+    top: '23.5%', left: '28%', width: '7%', height: '.5%',
+    title: 'Detalhar trecho',
+    description: 'Para isso, clique aqui e uma tela de edição irá abrir.',
+    side: 'bottom',
+    align: 'center',
+  },
+  {
+    id: 'spot-16',
+    top: '25%', left: '57%', width: '15%', height: '40%',
+    title: 'Detalhar trecho',
+    description: 'Enquadre o carimbo.',
+    side: 'bottom',
+    align: 'center',
+  },
+  {
+    id: 'spot-17',
+    top: '14.3%', left: '19.5%', width: '1%', height: '2%',
+    title: 'Detalhar trecho',
+    description: 'Clique aqui ou o botão delete.',
+    side: 'bottom',
+    align: 'center',
+  },
+  {
+    id: 'spot-18',
+    top: '14.3%', left: '8.3%', width: '1%', height: '2%',
+    title: 'Detalhar trecho',
+    description: 'Clique aqui para salvar a edição e voltar para a tela principal.',
+    side: 'bottom',
+    align: 'center',
+  },
+
+//   {
+//     id: 'spot-6',
+//     top: '10.5%', left: '16%', width: '13.5%', height: '2.5%',
+//     title: '6º passo',
+//     description: 'Preencha as datas de previsão de entrega e de conferencia.',
+//     side: 'left',
+//     align: 'end',
+//   },{
+//     id: 'spot-7',
+//     top: '10.5%', left: '31%', width: '10%', height: '2.5%',
+//     title: '7º passo',
+//     description: 'Escolha o conferencista.',
+//     side: 'left',
+//     align: 'end',
+//   },{
+//     id: 'spot-8',
+//     top: '10.5%', left: '43%', width: '6%', height: '2.5%',
+//     title: '8º passo',
+//     description: 'A cor de conferencia caso deseje alterar. O padrão é em vermelho.',
+//     side: 'left',
+//     align: 'end',
+//   },{
+//     id: 'spot-9',
+//     top: '10.5%', left: '51%', width: '10%', height: '2.5%',
+//     title: '9º passo',
+//     description: 'Clique em gravar planilhamento para prosseguir para a tela de conferencia. Será salvo no banco de dados e poderá ser acessado a qualquer momento.',
+//     side: 'left',
+//     align: 'end',
+//   }
+];
+
 export function DigitacaoOtimizada() {
+    const tourRef = useRef(null);
+    const [tourCurrentStep, setTourCurrentStep] = useState(null);
+const imgSources = {
+        img1: '/assets/digitacaootimizada/digitotim1.webp',
+        img2: '/assets/digitacaootimizada/digitotim2.webp',
+        img3: '/assets/digitacaootimizada/digitotim3.webp',
+        img4: '/assets/digitacaootimizada/digitotim4.webp',
+        img5: '/assets/digitacaootimizada/digitotim5.webp',
+        img6: '/assets/digitacaootimizada/digitotim6.webp',
+        img7: '/assets/digitacaootimizada/digitotim7.webp',
+        img8: '/assets/digitacaootimizada/digitotim8.webp',
+        img9: '/assets/digitacaootimizada/digitotim9.webp',
+        img10: '/assets/digitacaootimizada/digitotim10.webp',
+        img11: '/assets/digitacaootimizada/digitotim11.webp',
+    }
+    let currentImg = imgSources.img1
+
+    switch (tourCurrentStep) {
+        case 'spot-4':
+        case 'spot-5':
+            currentImg = imgSources.img2
+            break
+        case 'spot-6':
+        case 'spot-7':
+        case 'spot-8':
+        case 'spot-9':
+            currentImg = imgSources.img3
+            break
+        case 'spot-10':
+        case 'spot-11':
+        case 'spot-12':
+            currentImg = imgSources.img4
+            break
+        case 'spot-13':
+        case 'spot-14':
+        case 'spot-15':
+        case 'spot-16':
+        case 'spot-17':
+        case 'spot-18':
+        case 'spot-19':
+            currentImg = imgSources.img5
+            break
+        case 'spot-20':
+            currentImg = imgSources.img8
+            break
+        default: 
+            currentImg
+    }
+
+    console.log(tourCurrentStep)
+
+  useEffect(() => {
+    const tour = driver({
+      showProgress: false,
+      animate: true,
+      allowClose: true,
+      onHighlightStarted: (element) => {
+        setTourCurrentStep(element?.id || null);
+      },
+    //   onDestroyStarted: () => {
+    //     setTourCurrentStep(null);
+    //   },
+      steps: tourSteps.map((s) => ({
+        element: `#${s.id}`,
+        popover: {
+          title: s.title,
+          description: s.description,
+          side: s.side,
+          align: s.align,
+          nextBtnText: '>',
+          prevBtnText: '<',
+        },
+      })),
+    });
+    
+    tourRef.current = tour;
+    tour.drive();
+  }, []);
+
+
   return (
     <div className="space-y-4">
-      <h3 className="text-lg font-semibold">Sobre este módulo</h3>
-      <p className="text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <h4 className="text-sm font-semibold text-gray-300 mt-6">Funcionalidades</h4>
-      <ul className="list-disc list-inside text-gray-400 text-sm space-y-1">
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>Consectetur adipiscing elit</li>
-        <li>Sed do eiusmod tempor</li>
-        <li>Ut labore et dolore magna</li>
-      </ul>
+      <div className="relative inline-block">
+        <img src={currentImg} alt="" />
+        {tourSteps.map((s) => (
+          <div
+            key={s.id}
+            id={s.id}
+            className="absolute pointer-events-none"
+            style={{ top: s.top, left: s.left, width: s.width, height: s.height }}
+          />
+        ))}
+      </div>
     </div>
   );
 }
+

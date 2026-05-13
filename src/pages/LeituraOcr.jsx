@@ -321,6 +321,8 @@ export function LeituraOcr() {
           description: s.description,
           side: s.side,
           align: s.align,
+          nextBtnText: '>',
+          prevBtnText: '<',
         },
       })),
     });

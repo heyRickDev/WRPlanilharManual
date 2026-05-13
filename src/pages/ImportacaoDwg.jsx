@@ -257,7 +257,7 @@ const imgSources = {
           side: s.side,
           align: s.align,
           nextBtnText: '>',
-          prevBtnText: '<'
+          prevBtnText: '<',
         },
       })),
     });

@@ -88,7 +88,7 @@ function Hero() {
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-white via-indigo-400 to-cyan-400 bg-clip-text text-transparent">WRPlanilhar</h1>
         <p className="text-gray-400 text-lg md:text-xl mb-8">Software de planilhamento eletrônico</p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <a href="#documentacao" className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-semibold transition-all hover:-translate-y-0.5 shadow-lg shadow-indigo-500/20">Ver Documentação</a>
+          <a href="#updates" className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-semibold transition-all hover:-translate-y-0.5 shadow-lg shadow-indigo-500/20">Ver novidades</a>
           <a href="#modulos" className="px-6 py-3 bg-surface hover:bg-surface/80 rounded-xl font-semibold border border-border transition-all hover:-translate-y-0.5">Explorar Módulos</a>
         </div>
       </div>
@@ -149,6 +149,7 @@ function Modules({ onOpenDoc }) {
 function Features() {
   return (
     <section className="bg-bg">
+      <h2 id='updates' className="text-3xl md:text-4xl font-bold mb-4 text-center">Atualizações</h2>
       {features.map((f, i) => (
         <div key={i} className="min-h-screen flex items-center justify-center px-6 relative">
           <div className="text-center max-w-xl">
