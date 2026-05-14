@@ -231,19 +231,19 @@ export function LeituraOcr() {
   const tourRef = useRef(null);
   const [tourCurrentStep, setTourCurrentStep] = useState(null);
   const imgSources = {
-    img1: '/assets/leituraocr/leituraocr1.jpg',
-    img2: '/assets/leituraocr/leituraocr2.jpg',
-    img3: '/assets/leituraocr/leituraocr3.jpg',
-    img4: '/assets/leituraocr/leituraocr4.jpg',
-    img5: '/assets/leituraocr/leituraocr5.jpg',
-    img6: '/assets/leituraocr/leituraocr6.jpg',
-    img7: '/assets/leituraocr/leituraocr7.jpg',
-    img18: '/assets/leituraocr/leituraocr18.jpg',
-    img19: '/assets/leituraocr/leituraocr19.jpg',
-    img20: '/assets/leituraocr/leituraocr20.jpg',
-    img21: '/assets/leituraocr/leituraocr21.jpg',
-    img22: '/assets/leituraocr/leituraocr22.jpg',
-    img23: '/assets/leituraocr/leituraocr23.jpg',
+    img1: '/assets/leituraocr/leituraocr1.webp',
+    img2: '/assets/leituraocr/leituraocr2.webp',
+    img3: '/assets/leituraocr/leituraocr3.webp',
+    img4: '/assets/leituraocr/leituraocr4.webp',
+    img5: '/assets/leituraocr/leituraocr5.webp',
+    img6: '/assets/leituraocr/leituraocr6.webp',
+    img7: '/assets/leituraocr/leituraocr7.webp',
+    img18: '/assets/leituraocr/leituraocr18.webp',
+    img19: '/assets/leituraocr/leituraocr19.webp',
+    img20: '/assets/leituraocr/leituraocr20.webp',
+    img21: '/assets/leituraocr/leituraocr21.webp',
+    img22: '/assets/leituraocr/leituraocr22.webp',
+    img23: '/assets/leituraocr/leituraocr23.webp',
   }
   let currentImg = imgSources.img1
 

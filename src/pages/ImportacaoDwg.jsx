@@ -189,18 +189,18 @@ export function ImportaçãoDwg() {
     const tourRef = useRef(null);
     const [tourCurrentStep, setTourCurrentStep] = useState(null);
 const imgSources = {
-        img1: '/assets/importacaodwg/impdwg.jpg',
-        img2: '/assets/importacaodwg/impdwg2.jpg',
-        img3: '/assets/importacaodwg/impdwg3.jpg',
-        img4: '/assets/importacaodwg/impdwg4.jpg',
-        img5: '/assets/importacaodwg/impdwg5.jpg',
-        img6: '/assets/importacaodwg/impdwg6.jpg',
-        img7: '/assets/importacaodwg/impdwg7.jpg',
-        img8: '/assets/importacaodwg/impdwg8.jpg',
-        img9: '/assets/importacaodwg/impdwg9.jpg',
-        img10: '/assets/importacaodwg/impdwg10.jpg',
-        img11: '/assets/importacaodwg/impdwg11.jpg',
-        img12: '/assets/importacaodwg/impdwg12.jpg',
+        img1: '/assets/importacaodwg/impdwg1.webp',
+        img2: '/assets/importacaodwg/impdwg2.webp',
+        img3: '/assets/importacaodwg/impdwg3.webp',
+        img4: '/assets/importacaodwg/impdwg4.webp',
+        img5: '/assets/importacaodwg/impdwg5.webp',
+        img6: '/assets/importacaodwg/impdwg6.webp',
+        img7: '/assets/importacaodwg/impdwg7.webp',
+        img8: '/assets/importacaodwg/impdwg8.webp',
+        img9: '/assets/importacaodwg/impdwg9.webp',
+        img10: '/assets/importacaodwg/impdwg10.webp',
+        img11: '/assets/importacaodwg/impdwg11.webp',
+        img12: '/assets/importacaodwg/impdwg12.webp',
     }
     let currentImg = imgSources.img1
 

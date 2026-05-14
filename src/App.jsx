@@ -7,6 +7,7 @@ import { ImportacaoAutomatizada } from './pages/ImportacaoAutomatizada';
 import { MinhasConferencias } from './pages/MinhasConferencias';
 import { ConferenciasProjetos } from './pages/ConferenciasProjetos';
 import { AnaliseGerencial } from './pages/AnaliseGerencial';
+import { TutorialModules } from './components/TutorialModules';
 
 const modulePages = {
   'Importação DWG/DXF': ImportaçãoDwg,
@@ -47,7 +48,7 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const links = ['Módulos', 'Demonstração', 'Contato'];
+  const links = ['Módulos', 'Demonstrações', 'Atualizações'];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-bg/80 backdrop-blur-md border-b border-border shadow-lg' : ''}`}>
@@ -150,7 +151,7 @@ function Features() {
   return (
     <section className="bg-bg">
       <h2 id='updates' className="text-3xl md:text-4xl font-bold mb-4 text-center">Atualizações</h2>
-      {features.map((f, i) => (
+      {/* {features.map((f, i) => (
         <div key={i} className="min-h-screen flex items-center justify-center px-6 relative">
           <div className="text-center max-w-xl">
             <span className="text-indigo-400 text-sm font-bold tracking-widest mb-4 block">{f.num}</span>
@@ -158,7 +159,7 @@ function Features() {
             <p className="text-gray-400 text-lg">{f.desc}</p>
           </div>
         </div>
-      ))}
+      ))} */}
     </section>
   );
 }
@@ -207,6 +208,7 @@ export default function App() {
         <Hero />
         <Modules onOpenDoc={setSelectedModule} />
         <Features />
+        <TutorialModules />
       </main>
       {/* <Footer /> */}
       {selectedModule && <Modal module={selectedModule} onClose={() => setSelectedModule(null)} />}
