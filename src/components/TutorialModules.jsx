@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NewFeature } from './NewFeature';
 
 const modules = [
   {
@@ -6,6 +7,14 @@ const modules = [
     videos: [
       // { title: 'Introdução à importação DWG/DXF', duration: '4:32', videoId: 'ku3uHZk9uPs' },
     ],
+  },
+  {
+    title: 'Leitura OCR',
+    videos: [
+      { title: 'Demonstração de utilização do módulo', duration: '12min', videoId: 'ku3uHZk9uPs' },
+
+    ],
+    relevant: true
   },
   {
     title: 'Importação XLS',
@@ -16,13 +25,6 @@ const modules = [
   {
     title: 'Digitação Otimizada',
     videos: [
-
-    ],
-  },
-  {
-    title: 'Leitura OCR',
-    videos: [
-      { title: 'Demonstração de utilização do módulo', duration: '12min', videoId: 'ku3uHZk9uPs' },
 
     ],
   },
@@ -78,13 +80,13 @@ export function TutorialModules() {
           {modules.map((mod, i) => {
             const isOpen = i === openIndex;
             return (
-              <div key={mod.title} className="bg-surface border border-border rounded-2xl overflow-hidden transition-all duration-300">
+              <div key={mod.title} className={`${mod.relevant ? 'animated-border hover:bg-amber-200/10' : '' } bg-surface border border-border rounded-2xl overflow-hidden transition-all duration-300`}>
                 <button
                   onClick={() => toggle(i)}
                   className="w-full flex items-center justify-between p-6 text-left hover:bg-white/[0.02] transition-colors"
                 >
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold">{mod.title}</h3>
+                    <h3 className="text-lg font-semibold">{mod.title}{mod.relevant ? <NewFeature/> : null}</h3>
                   </div>
                   <div className={`ml-4 w-8 h-8 flex items-center justify-center rounded-full border border-border transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
                     <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

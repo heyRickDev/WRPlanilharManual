@@ -4,17 +4,25 @@ import 'driver.js/dist/driver.css';
 
 const tourSteps = [
   {
+    id: 'spot-0',
+    top: '50%', left: '50%', width: '0%', height: '0%',
+    title: 'Tour - Importação DWG',
+    description: 'Use as direcionais ← e → para seguir.',
+    side: 'over',
+    align: 'center',
+  },
+  {
     id: 'spot-1',
     top: '11.5%', left: '2%', width: '42%', height: '9%',
-    title: '1º passo',
+    title: 'Dados do cliente',
     description: 'Insira aqui os dados referentes ao projeto que deseja importar.',
     side: 'bottom',
-    align: 'start',
+    align: 'center',
   },
   {
     id: 'spot-2',
     top: '11%', left: '46%', width: '14%', height: '11%',
-    title: '2º passo',
+    title: 'Tipo de Projeto',
     description: `
                     Selecione aqui o tipo de projeto que deseja importar. 
                     Importante selecionar o tipo corretamente para que a 
@@ -28,7 +36,7 @@ const tourSteps = [
   {
     id: 'spot-3',
     top: '12%', left: '62%', width: '10.5%', height: '2.5%',
-    title: '3º passo',
+    title: 'Selecionar Projeto',
     description: 'Clique para selecionar o arquivo DWG ou DXF.',
     side: 'bottom',
     align: 'center',
@@ -36,28 +44,28 @@ const tourSteps = [
   {
     id: 'spot-4',
     top: '27%', left: '0%', width: '100%', height: '80%',
-    title: '4º passo',
+    title: 'Gerar Planilhamento',
     description: `Após breve tempo, o projeto irá abrir abaixo.
                     A partir daqui temos algumas opções para seguirmos:
                     Planilhamento do projeto por inteiro ou planilhamento de alguns elementos do projeto.`,
-    side: 'left',
-    align: 'end',
+    side: 'top',
+    align: 'over',
   },
   {
     id: 'spot-5',
     top: '23.5%', left: '1%', width: '10%', height: '.5%',
     title: 'Separar elemento',
     description: 'Por padrão na leitura será unificado os elementos que forem semelhantes, por exemplo, v3=v6. Habilite esta opção para tratá-los como elementos separados.',
-    side: 'left',
-    align: 'end',
+    side: 'right',
+    align: 'start',
   },
   {
     id: 'spot-6',
     top: '23.5%', left: '12%', width: '3%', height: '.5%',
     title: 'Layer',
     description: 'Podemos desabilitar alguns layers para facilitar a visualização e a leitura do projeto.',
-    side: 'left',
-    align: 'end',
+    side: 'bottom',
+    align: 'start',
   },
   {
     id: 'spot-7',
@@ -65,15 +73,15 @@ const tourSteps = [
     title: 'Layer',
     description: 'Desabilite/habilite o layer clicando no ícone da lampada.',
     side: 'left',
-    align: 'end',
+    align: 'center',
   },
   {
     id: 'spot-8',
     top: '23.5%', left: '16.5%', width: '2%', height: '.5%',
     title: 'Email',
     description: 'Clicando aqui pode ser enviado um email com o projeto em anexo para análise e correção de leitura.',
-    side: 'left',
-    align: 'end',
+    side: 'bottom',
+    align: 'center',
   },
   {
     id: 'spot-9',

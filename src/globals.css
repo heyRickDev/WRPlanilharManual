@@ -1,0 +1,26 @@
+/* @keyframes spin-border {
+  to { transform: rotate(360deg); }
+} */
+
+@keyframes border-oscillate {
+  0%, 100% { border-color: #fbbf24; } /* amber-400 */
+  50%       { border-color: #fef3c7; } /* amber-100 */
+}
+
+.animated-border {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fbbf24;
+  animation: border-oscillate 1.5s ease-in-out infinite;
+}
+
+@keyframes bg-oscillate {
+  0%, 100% { background-color: #fbbf24; } /* amber-400 */
+  50%       { background-color: #fef3c7; } /* amber-100 */
+}
+
+.animated-bg {
+  background-color: #fbbf24;
+  animation: border-oscillate 1.5s ease-in-out infinite;
+}
+

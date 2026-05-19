@@ -4,6 +4,14 @@ import 'driver.js/dist/driver.css';
 
 const tourSteps = [
   {
+    id: 'spot-0',
+    top: '50%', left: '50%', width: '0%', height: '0%',
+    title: 'Tour - Leitura OCR',
+    description: 'Use as direcionais ← e → para seguir.',
+    side: 'over',
+    align: 'center',
+  },
+  {
     id: 'spot-1',
     top: '11%', left: '2%', width: '42%', height: '9%',
     title: 'Dados do cliente',
@@ -31,7 +39,7 @@ const tourSteps = [
     title: 'Selecionar Projeto',
     description: 'Clique para selecionar o arquivo PDF ou JPEG.',
     side: 'bottom',
-    align: 'end',
+    align: 'center',
   },
   {
     id: 'spot-4',
@@ -39,7 +47,7 @@ const tourSteps = [
     title: 'Analisar projeto ',
     description: 'Após selecionar o arquivo, aguarde ele carregar em tela e clique aqui para processar.',
     side: 'bottom',
-    align: 'end',
+    align: 'center',
   },
   {
     id: 'spot-5',
@@ -61,8 +69,8 @@ const tourSteps = [
     top: '12%', left: '1%', width: '6%', height: '1.5%',
     title: 'Escala de zoom',
     description: 'Importante se atentar para a escala. Caso tenha menos de 60% a leitura dos caracteres tende a ser menos assertiva, logo opte por enquadrar o resumo numa proporção de pelo menos 60%.',
-    side: 'bottom',
-    align: 'end',
+    side: 'right',
+    align: 'start',
   }, {
     id: 'spot-8',
     top: '29%', left: '23%', width: '74%', height: '55.5%',
@@ -145,8 +153,8 @@ const tourSteps = [
     top: '39.5%', left: '12.6%', width: '12%', height: '0.1%',
     title: 'Renomear elemento',
     description: 'Use esta opção caso queira alterar de uma vez só o nome do elemento estrutural.',
-    side: 'left',
-    align: 'end',
+    side: 'right',
+    align: 'center',
   }, {
     id: 'spot-20',
     top: '43%', left: '40%', width: '18.5%', height: '18%',
@@ -166,8 +174,8 @@ const tourSteps = [
     top: '42.5%', left: '12.6%', width: '12%', height: '0.1%',
     title: 'Inserção de posição',
     description: 'Clicando aqui você pode inserir uma nova posição manualmente.',
-    side: 'left',
-    align: 'end',
+    side: 'right',
+    align: 'center',
   }, {
     id: 'spot-23',
     top: '42.5%', left: '1%', width: '18.5%', height: '3%',
@@ -180,29 +188,29 @@ const tourSteps = [
     top: '46%', left: '12.6%', width: '12%', height: '6%',
     title: 'Exclusões',
     description: 'Temos opções de deletar posições ou o elemento inteiro, ou ainda caso queira pode ser zerado a grid selecionando "Excluir Todos".',
-    side: 'left',
-    align: 'end',
+    side: 'right',
+    align: 'center',
   }, {
     id: 'spot-25',
     top: '55%', left: '12.6%', width: '12%', height: '4%',
     title: 'Multiplicações',
     description: 'Clique aqui para multiplicar todos por um valor ou apenas o elemento selecionado.',
-    side: 'left',
-    align: 'end',
+    side: 'right',
+    align: 'center',
   }, {
     id: 'spot-26',
     top: '62.5%', left: '12.6%', width: '12%', height: '.3%',
     title: 'Tipo de aço',
     description: 'Aqui você altera o tipo de aço entre CA, XC e AR.',
-    side: 'left',
-    align: 'end',
+    side: 'right',
+    align: 'center',
   }, {
     id: 'spot-27',
     top: '67%', left: '12.6%', width: '12%', height: '.3%',
     title: 'Exportação planilha excel',
     description: 'Caso deseje exportar esta grid para excel clique aqui e um arquivo com todos os dados será gerado.',
-    side: 'left',
-    align: 'end',
+    side: 'right',
+    align: 'center',
   }, {
     id: 'spot-28',
     top: '0%', left: '0%', width: '100%', height: '100%',
@@ -215,15 +223,15 @@ const tourSteps = [
     top: '33.3%', left: '12.6%', width: '12%', height: '0.1%',
     title: 'Gerar planilhamento',
     description: 'Tendo feito as devidas correções, clique aqui para prosseguir.',
-    side: 'left',
-    align: 'end',
+    side: 'right',
+    align: 'center',
   }, {
     id: 'spot-30',
     top: '10.5%', left: '1.5%', width: '60%', height: '2.5%',
     title: 'Salvar planilhamento',
     description: 'Preencha os campos e clique em gravar planilhamento.',
-    side: 'left',
-    align: 'end',
+    side: 'right',
+    align: 'start',
   }
 ];
 
