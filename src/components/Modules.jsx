@@ -1,4 +1,13 @@
 import { useEffect } from "react";
+import { ImportaçãoDwg } from '../pages/ImportacaoDwg';
+import { ImportacaoXls } from '../pages/ImportacaoXls';
+import { DigitacaoOtimizada } from '../pages/DigitacaoOtimizada';
+import { LeituraOcr } from '../pages/LeituraOcr';
+import { ImportacaoAutomatizada } from '../pages/ImportacaoAutomatizada';
+import { MinhasConferencias } from '../pages/MinhasConferencias';
+import { ConferenciasProjetos } from '../pages/ConferenciasProjetos';
+import { AnaliseGerencial } from '../pages/AnaliseGerencial';
+import { TutorialModules } from '../components/TutorialModules';
 
 const modulePages = {
   'Importação DWG/DXF': ImportaçãoDwg,
