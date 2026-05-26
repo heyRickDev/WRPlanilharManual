@@ -113,82 +113,92 @@ const tourSteps = [
   },
   {
     id: 'spot-13',
-    top: '10%', left: '16%', width: '69%', height: '84%',
-    title: 'Gerar planilhamento',
-    description: '',
-    side: 'left',
-    align: 'center',
+    top: '30%', left: '16%', width: '69%', height: '10%',
+    title: 'Variáveis',
+    description: 'Insira os valores "Inicial" e "Final" para cada parcial e clique em gerar variáveis',
+    side: 'bottom',
+    align: 'end',
   },
   {
     id: 'spot-14',
-    top: '27%', left: '0%', width: '100%', height: '80%',
-    title: 'Carimbo',
-    description: 'Note que o carimbo é formado por várias linhas, que podem onerar a leitura causando lentidão. Vamos removê-lo!',
+    top: '40%', left: '32%', width: '25%', height: '50%',
+    title: 'Variáveis',
+    description: 'Os valores serão carregados abaixo. Basta fechar a tela e prosseguir',
     side: 'top',
     align: 'center',
   },
   {
     id: 'spot-15',
-    top: '23.5%', left: '28%', width: '7%', height: '.5%',
-    title: 'Detalhar trecho',
-    description: 'Para isso, clique aqui e uma tela de edição irá abrir.',
+    top: '66.5%', left: '22%', width: '9%', height: '.1%',
+    title: 'Divisões de variáveis',
+    description: 'Caso queira dividir uma variável criada clique aqui. Você poderá dividir por quantidade ou comprimento.',
     side: 'bottom',
     align: 'center',
   },
   {
     id: 'spot-16',
-    top: '25%', left: '57%', width: '15%', height: '40%',
-    title: 'Detalhar trecho',
-    description: 'Enquadre o carimbo.',
+    top: '69.5%', left: '22%', width: '9%', height: '2%',
+    title: 'Editar elemento/posição',
+    description: 'Ações para a aplicar a posição selecionada.',
     side: 'bottom',
     align: 'center',
   },
   {
     id: 'spot-17',
-    top: '14.3%', left: '19.5%', width: '1%', height: '2%',
-    title: 'Detalhar trecho',
-    description: 'Clique aqui ou o botão delete.',
-    side: 'bottom',
+    top: '74.5%', left: '22%', width: '9%', height: '.2%',
+    title: 'Multiplicação',
+    description: 'Aqui você poderá multiplicar todos os elementos já lançados na grid por um valor inserido.',
+    side: 'top',
     align: 'center',
   },
   {
     id: 'spot-18',
-    top: '14.3%', left: '8.3%', width: '1%', height: '2%',
-    title: 'Detalhar trecho',
-    description: 'Clique aqui para salvar a edição e voltar para a tela principal.',
-    side: 'bottom',
-    align: 'center',
+    top: '77%', left: '22%', width: '9%', height: '.2%',
+    title: 'Alterar tipo de Aço',
+    description: 'Clique aqui aplicar outro tipo de aço a todos os elementos.',
+    side: 'right',
+    align: 'end',
   },
-
-//   {
-//     id: 'spot-6',
-//     top: '10.5%', left: '16%', width: '13.5%', height: '2.5%',
-//     title: '6º passo',
-//     description: 'Preencha as datas de previsão de entrega e de conferencia.',
-//     side: 'left',
-//     align: 'end',
-//   },{
-//     id: 'spot-7',
-//     top: '10.5%', left: '31%', width: '10%', height: '2.5%',
-//     title: '7º passo',
-//     description: 'Escolha o conferencista.',
-//     side: 'left',
-//     align: 'end',
-//   },{
-//     id: 'spot-8',
-//     top: '10.5%', left: '43%', width: '6%', height: '2.5%',
-//     title: '8º passo',
-//     description: 'A cor de conferencia caso deseje alterar. O padrão é em vermelho.',
-//     side: 'left',
-//     align: 'end',
-//   },{
-//     id: 'spot-9',
-//     top: '10.5%', left: '51%', width: '10%', height: '2.5%',
-//     title: '9º passo',
-//     description: 'Clique em gravar planilhamento para prosseguir para a tela de conferencia. Será salvo no banco de dados e poderá ser acessado a qualquer momento.',
-//     side: 'left',
-//     align: 'end',
-//   }
+  {
+    id: 'spot-19',
+    top: '80%', left: '22%', width: '9%', height: '.2%',
+    title: 'Ordenar elemento/posição',
+    description: 'Clicando aqui os elementos serão reordenados por "elemento estrutural" e depois por "posição" em modo crescente.',
+    side: 'right',
+    align: 'end',
+  },
+  {
+    id: 'spot-20',
+    top: '83%', left: '22%', width: '9%', height: '.2%',
+    title: 'Alterar Observação',
+    description: 'Aqui voce aplica outra observação para a posição selecionada.',
+    side: 'right',
+    align: 'end',
+  },
+  {
+    id: 'spot-21',
+    top: '86.5%', left: '22%', width: '9%', height: '.2%',
+    title: 'Exportar excel',
+    description: 'Clicando aqui voce pode exportar os valores lançados para um arquivo em excel que será gerado.',
+    side: 'right',
+    align: 'end',
+  },
+  {
+    id: 'spot-22',
+    top: '0%', left: '0%', width: '100%', height: '100%',
+    title: 'Resumo planilhamento',
+    description: 'Tendo feito todos os lançamentos e ajustes..',
+    side: 'right',
+    align: 'end',
+  },
+  {
+    id: 'spot-23',
+    top: '25%', left: '65%', width: '12%', height: '.1%',
+    title: 'Resumo planilhamento',
+    description: 'Clique aqui para prosseguir',
+    side: 'right',
+    align: 'end',
+  },
 ];
 
 export function DigitacaoOtimizada() {
@@ -201,11 +211,6 @@ const imgSources = {
         img4: '/assets/digitacaootimizada/digitotim4.webp',
         img5: '/assets/digitacaootimizada/digitotim5.webp',
         img6: '/assets/digitacaootimizada/digitotim6.webp',
-        img7: '/assets/digitacaootimizada/digitotim7.webp',
-        img8: '/assets/digitacaootimizada/digitotim8.webp',
-        img9: '/assets/digitacaootimizada/digitotim9.webp',
-        img10: '/assets/digitacaootimizada/digitotim10.webp',
-        img11: '/assets/digitacaootimizada/digitotim11.webp',
     }
     let currentImg = imgSources.img1
 
@@ -223,25 +228,25 @@ const imgSources = {
         case 'spot-10':
         case 'spot-11':
         case 'spot-12':
-            currentImg = imgSources.img4
-            break
-        case 'spot-13':
-        case 'spot-14':
         case 'spot-15':
         case 'spot-16':
         case 'spot-17':
         case 'spot-18':
         case 'spot-19':
+        case 'spot-20':
+        case 'spot-21':
+            currentImg = imgSources.img4
+            break
+        case 'spot-13':
+        case 'spot-14':
             currentImg = imgSources.img5
             break
-        case 'spot-20':
-            currentImg = imgSources.img8
-            break
+        case 'spot-22':
+        case 'spot-23':
+            currentImg = imgSources.img6
         default: 
             currentImg
     }
-
-    console.log(tourCurrentStep)
 
   useEffect(() => {
     const tour = driver({
@@ -251,9 +256,6 @@ const imgSources = {
       onHighlightStarted: (element) => {
         setTourCurrentStep(element?.id || null);
       },
-    //   onDestroyStarted: () => {
-    //     setTourCurrentStep(null);
-    //   },
       steps: tourSteps.map((s) => ({
         element: `#${s.id}`,
         popover: {
