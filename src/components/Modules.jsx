@@ -5,7 +5,7 @@ import { DigitacaoOtimizada } from '../pages/DigitacaoOtimizada';
 import { LeituraOcr } from '../pages/LeituraOcr';
 import { ImportacaoAutomatizada } from '../pages/ImportacaoAutomatizada';
 import { MinhasConferencias } from '../pages/MinhasConferencias';
-import { ConferenciasProjetos } from '../pages/ConferenciasProjetos';
+import { ConferenciaProjetos } from '../pages/ConferenciaProjetos';
 import { AnaliseGerencial } from '../pages/AnaliseGerencial';
 import { TutorialModules } from '../components/TutorialModules';
 import { NewFeature } from "./NewFeature";
@@ -17,7 +17,7 @@ const modulePages = {
   'Leitura OCR': LeituraOcr,
   'Importação Automatizada': ImportacaoAutomatizada,
   'Minhas Conferências': MinhasConferencias,
-  'Conferências Projetos': ConferenciasProjetos,
+  'Conferência Projetos': ConferenciaProjetos,
   'Análise Gerencial': AnaliseGerencial,
 };
 
@@ -28,7 +28,7 @@ const modules = [
   { title: 'Digitação Otimizada', desc: 'Aqui voce insere manualmente as posições de seus projetos.' },
   { title: 'Importação Automatizada', desc: 'Configure uma pasta que deseje para fazer a leitura automática.' },
   { title: 'Minhas Conferências', desc: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.' },
-  { title: 'Conferências Projetos', desc: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.' },
+  { title: 'Conferência Projetos', desc: 'Busque por projetos já planilhados para realizar a conferencia.' },
   { title: 'Análise Gerencial', desc: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.' },
 ];
 

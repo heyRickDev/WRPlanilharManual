@@ -113,7 +113,7 @@ const tourSteps = [
   },
   {
     id: 'spot-13',
-    top: '30%', left: '16%', width: '69%', height: '10%',
+    top: '31%', left: '16%', width: '69%', height: '6%',
     title: 'Variáveis',
     description: 'Insira os valores "Inicial" e "Final" para cada parcial e clique em gerar variáveis',
     side: 'bottom',
