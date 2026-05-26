@@ -80,22 +80,7 @@ const tourSteps = [
     description: 'Clique para gerar e seguir.',
     side: 'bottom',
     align: 'center',
-  },
-  {
-    id: 'spot-9',
-    top: '56%', left: '0%', width: '100%', height: '36%',
-    title: 'Grid de Lançamentos',
-    description: 'As posições vão sendo armazenadas na grid abaixo. Repita o processo anterior para o mesmo elemento.',
-    side: 'right',
-    align: 'center',
-  },{
-    id: 'spot-10',
-    top: '0%', left: '0%', width: '100%', height: '100%',
-    title: 'Grid de Lançamentos',
-    description: 'Clicando com o botão direito temos algumas funções de ações com a grid. Vejamos..',
-    side: 'over',
-    align: 'center',
-  },
+  }
 ];
 
 export function ImportacaoXls() {
