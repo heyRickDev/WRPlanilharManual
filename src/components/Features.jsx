@@ -1,19 +1,26 @@
 export function Features() {
     const features = [
-      { num: '01', title: 'Lorem Ipsum Dolor', desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.' },
-      { num: '02', title: 'Consectetur Adipiscing', desc: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut.' },
-      { num: '03', title: 'Eiusmod Tempor', desc: 'Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis.' },
-      { num: '04', title: 'Magna Aliqua', desc: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.' },
+      { number: 'Versão - W2026061001', improvements: [
+        'Digitação Otimizada: Correção de erro na aplicação das fórmulas.', 
+        'Leitor OCR: Removido leitura automática do módulo e mantido apenas no módulo Digitação Automatizada',
+        'Importação automatizada: Corrigido erro ao encontrar caminho da pasta.'
+      ] },
+      { number: 'Versão - W2026060803', improvements: [
+        'Leitor OCR: Comportamento de leitura no modo automático alterado. Agora é feito a deleção dos arquivos gerados (jpeg e txt) do resumo.',
+        'Inserido botão de email para envio de arquivos PDF.',
+        'Importação automatizada: Alteração de nomenclatura PDF > OCR.',
+      ] },
     ];
   return (
     <section className="bg-bg">
-      <h2 id='updates' className="text-3xl md:text-4xl font-bold mb-4 text-center">Atualizações</h2>
-      {features.map((f, i) => (
-        <div key={i} className="min-h-screen flex items-center justify-center px-6 relative">
+      <h2 id='atualizacoes' className="text-3xl md:text-4xl font-bold mb-4 text-center">Atualizações</h2>
+      {features.map((version, index) => (
+        <div key={index} className="min-h-screen flex items-center justify-center px-6 relative">
           <div className="text-center max-w-xl">
-            <span className="text-indigo-400 text-sm font-bold tracking-widest mb-4 block">{f.num}</span>
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">{f.title}</h3>
-            <p className="text-gray-400 text-lg">{f.desc}</p>
+            <span className="text-indigo-400 text-sm font-bold tracking-widest mb-4 block">{version.number}</span>
+            <ul className="text-gray-400 text-xl list-disc">
+              {version.improvements.map((improvement, i) => <li className="text-left" key={i}>{improvement}</li>)}
+            </ul>
           </div>
         </div>
       ))}
