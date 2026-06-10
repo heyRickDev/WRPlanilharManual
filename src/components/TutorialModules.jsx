@@ -31,8 +31,9 @@ const modules = [
   {
     title: 'Importação Automatizada',
     videos: [
-    
+      { title: 'Leitura automática do resumo - OCR', duration: '2min', videoId: '4n8G4H55BRk' },
     ],
+    relevant: true
   },
   {
     title: 'Minhas Conferências',
