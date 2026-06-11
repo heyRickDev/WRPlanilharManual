@@ -5,8 +5,9 @@ const modules = [
   {
     title: 'Importação DWG/DXF',
     videos: [
-      // { title: 'Introdução à importação DWG/DXF', duration: '4:32', videoId: 'ku3uHZk9uPs' },
+      { title: 'Planilhamento por resumo detalhado', duration: '3min', videoId: 'Z632Cu6hI6U' },
     ],
+    relevant: true
   },
   {
     title: 'Leitura OCR',
